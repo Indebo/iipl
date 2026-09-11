@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>India on your mind? — Indebo</title>
+<meta name="description" content="Some possibilities for travelling through India with Indebo.">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper: #EDEAE1;
+    --ink: #212B30;
+    --ink-soft: #4B565B;
+    --madder: #7C332A;
+    --turmeric: #B5872C;
+    --indigo: #2D4356;
+    --line: rgba(33,43,48,0.16);
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+
+  body{
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{
+    color: inherit;
+  }
+
+  ::selection{
+    background: var(--madder);
+    color: var(--paper);
+  }
+
+  :focus-visible{
+    outline: 2px solid var(--madder);
+    outline-offset: 5px;
+  }
+
+  main{
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 32px 80px;
+  }
+
+  /* Header */
+
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 15vh;
+  }
+
+  .wordmark{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  .back{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+    text-decoration: none;
+  }
+
+  .back:hover{
+    color: var(--ink);
+  }
+
+  /* Introduction */
+
+  .intro{
+    margin-bottom: 15vh;
+  }
+
+  h1{
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(42px, 7vw, 68px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin: 0 0 28px;
+    max-width: 11ch;
+  }
+
+  .intro p{
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    max-width: 48ch;
+    margin: 0;
+  }
+
+  /* Possibilities */
+
+  .possibilities{
+    border-top: 1px solid var(--line);
+  }
+
+  .possibility{
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 32px;
+    padding: 36px 0 40px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .possibility-number{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+    padding-top: 7px;
+  }
+
+  .possibility h2{
+    font-family: 'Fraunces', serif;
+    font-size: clamp(25px, 4vw, 34px);
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 0 0 12px;
+  }
+
+  .possibility p{
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    max-width: 48ch;
+    margin: 0 0 16px;
+  }
+
+  .possibility-link{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--indigo);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--indigo);
+  }
+
+  .possibility-link:hover{
+    border-bottom-style: solid;
+  }
+
+  /* Closing */
+
+  .closing{
+    margin-top: 15vh;
+  }
+
+  .closing p{
+    font-family: 'Fraunces', serif;
+    font-size: clamp(27px, 4vw, 38px);
+    line-height: 1.25;
+    max-width: 19ch;
+    margin: 0 0 32px;
+  }
+
+  .conversation{
+    color: var(--madder);
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    border-bottom: 1px solid var(--madder);
+    padding-bottom: 3px;
+  }
+
+  /* Mobile */
+
+  @media (max-width: 600px){
+
+    main{
+      padding: 32px 20px 60px;
+    }
+
+    header{
+      margin-bottom: 12vh;
+    }
+
+    .intro{
+      margin-bottom: 12vh;
+    }
+
+    .intro p{
+      font-size: 16px;
+    }
+
+    .possibility{
+      grid-template-columns: 1fr;
+      gap: 10px;
+      padding: 28px 0 32px;
+    }
+
+    .possibility-number{
+      padding-top: 0;
+    }
+
+    .closing{
+      margin-top: 12vh;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<main>
+
+  <header>
+    <p class="wordmark">Indebo</p>
+    <a class="back" href="index.html">← The Door</a>
+  </header>
+
+
+  <section class="intro">
+
+    <h1>India on your mind?</h1>
+
+    <p>
+      There are many ways into India.
+      Perhaps you already know where you want to go.
+      Perhaps you only know what has made you curious.
+      Here are a few possibilities.
+    </p>
+
+  </section>
+
+
+  <section class="possibilities" aria-label="Possibilities">
+
+    <article class="possibility">
+
+      <div class="possibility-number">01</div>
+
+      <div>
+        <h2>Follow a craft</h2>
+
+        <p>
+          Polly's curiosity about textiles took us into the world
+          of warp and weft. Shivam taught us about zardozi —
+          how metal meets cloth and creates magic.
+        </p>
+
+        <a class="possibility-link" href="#">
+          Follow this thread →
+        </a>
+      </div>
+
+    </article>
+
+
+    <article class="possibility">
+
+      <div class="possibility-number">02</div>
+
+      <div>
+        <h2>Go looking for a story</h2>
+
+        <p>
+          A book, an old photograph, a building, a forgotten
+          connection. Sometimes the thing that interests you
+          most is not on the usual itinerary.
+        </p>
+
+        <a class="possibility-link" href="#">
+          See where it leads →
+        </a>
+      </div>
+
+    </article>
+
+
+    <article class="possibility">
+
+      <div class="possibility-number">03</div>
+
+      <div>
+        <h2>Meet someone who knows</h2>
+
+        <p>
+          A maker, historian, artist, cook, naturalist or simply
+          someone who has spent a lifetime paying attention.
+          People often make the place.
+        </p>
+
+        <a class="possibility-link" href="#">
+          Meet some of them →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <article class="possibility">
+
+      <div class="possibility-number">04</div>
+
+      <div>
+        <h2>Take the long way</h2>
+
+        <p>
+          Sometimes the road, railway or river between two places
+          is more interesting than either destination.
+        </p>
+
+        <a class="possibility-link" href="#">
+          Take a look →
+        </a>
+
+      </div>
+
+    </article>
+
+  </section>
+
+
+  <section class="closing">
+
+    <p>
+      These are possibilities, not packages.
+      The interesting part is finding the right one for you.
+    </p>
+
+    <a class="conversation" href="conversation.html">
+      Ready to start a conversation? →
+    </a>
+
+  </section>
+
+
+</main>
+
+</body>
+</html>
