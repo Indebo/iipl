@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indebo</title>
+<meta name="description" content="Indebo — independent, indelible. Based in India since 1979.">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper: #EDEAE1;
+    --ink: #212B30;
+    --ink-soft: #4B565B;
+    --madder: #7C332A;
+    --madder-soft: #A85B4C;
+    --turmeric: #B5872C;
+    --indigo: #2D4356;
+    --line: rgba(33,43,48,0.16);
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a{ color: inherit; }
+  ::selection{ background: var(--madder); color: var(--paper); }
+  :focus-visible{ outline: 2px solid var(--madder); outline-offset: 3px; }
+
+  main{
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 88px 28px 96px;
+  }
+
+  .dyemark{ margin-bottom: 32px; }
+  .dyemark svg{ width: 66px; height: 40px; display: block; }
+
+  .wordmark{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 44px;
+  }
+
+  h1{
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(32px, 5vw, 44px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 24px;
+    max-width: 14ch;
+  }
+  h1 em{
+    font-style: italic;
+    font-weight: 400;
+    color: var(--madder);
+  }
+
+  .lede{
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin: 0 0 56px;
+  }
+  .lede a{
+    color: var(--indigo);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .lede a:hover{ border-bottom-color: var(--indigo); }
+
+  .links{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  @media (max-width: 480px){
+    .links{ grid-template-columns: 1fr; }
+  }
+
+  .link-tile{
+    background: var(--paper);
+    padding: 28px 24px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.15s ease;
+  }
+  .link-tile:hover{ background: #E4E0D3; }
+
+  .link-tile .path{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .link-tile.purpose .path{ color: var(--madder); }
+  .link-tile.corporate .path{ color: var(--turmeric); }
+
+  .link-tile .desc{
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink);
+  }
+
+  footer{
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+  footer p{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  footer a{
+    color: var(--indigo);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--indigo);
+  }
+  footer a:hover{ border-bottom-style: solid; }
+</style>
+</head>
+<body>
+
+<main>
+
+  <div class="dyemark" aria-hidden="true">
+    <svg viewBox="0 0 66 40" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="18" cy="20" r="16" fill="var(--indigo)" opacity="0.85"/>
+      <circle cx="33" cy="20" r="16" fill="var(--madder)" opacity="0.85"/>
+      <circle cx="48" cy="20" r="16" fill="var(--turmeric)" opacity="0.85"/>
+    </svg>
+  </div>
+
+  <p class="wordmark">Indebo</p>
+
+  <h1>Independent. <em>Indelible.</em></h1>
+
+  <p class="lede">Indebo is a closely held company based in India, since 1979. Tourdarzi, where we design travel across India and the subcontinent, lives at <a href="https://tourdarzi.com" target="_blank" rel="noopener">tourdarzi.com ↗</a>. This is where we say what we believe, and who we are on paper.</p>
+
+  <div class="links">
+    <a class="link-tile purpose" href="purpose.html">
+      <span class="path">/purpose</span>
+      <span class="desc">What we believe in</span>
+    </a>
+    <a class="link-tile corporate" href="corporate.html">
+      <span class="path">/corporate</span>
+      <span class="desc">Registration details</span>
+    </a>
+  </div>
+
+  <footer>
+    <p>Indebo (India) Pvt Ltd &amp; Indebo Travels Pvt Ltd · <a href="mailto:india@indebo.com">india@indebo.com</a></p>
+  </footer>
+
+</main>
+
+</body>
+</html>
