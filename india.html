@@ -3,18 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>India on your mind? — Indebo</title>
-<meta name="description" content="Some possibilities for travelling through India with Indebo.">
+
+<title>India — Indebo</title>
+<meta name="description" content="There are many ways into India. Some begin with a place, some with a person, an object, a book or a question.">
 
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
+
   :root{
     --paper: #EDEAE1;
     --ink: #212B30;
@@ -52,18 +53,20 @@
   }
 
   main{
-    max-width: 760px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 56px 32px 80px;
   }
 
-  /* Header */
+
+  /* Header
+  -------------------------------------------------- */
 
   header{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 15vh;
+    margin-bottom: 13vh;
   }
 
   .wordmark{
@@ -86,68 +89,99 @@
     color: var(--ink);
   }
 
-  /* Introduction */
 
-  .intro{
-    margin-bottom: 15vh;
+  /* Opening
+  -------------------------------------------------- */
+
+  .opening{
+    max-width: 680px;
+    margin-bottom: 12vh;
   }
 
   h1{
     font-family: 'Fraunces', serif;
     font-weight: 400;
-    font-size: clamp(42px, 7vw, 68px);
+    font-size: clamp(46px, 7vw, 76px);
     line-height: 1.02;
     letter-spacing: -0.025em;
-    margin: 0 0 28px;
+    margin: 0 0 30px;
     max-width: 11ch;
   }
 
-  .intro p{
+  .opening p{
     font-size: 18px;
     line-height: 1.65;
     color: var(--ink-soft);
-    max-width: 48ch;
+    max-width: 46ch;
     margin: 0;
   }
 
-  /* Possibilities */
 
-  .possibilities{
+  /* Workshop image
+  -------------------------------------------------- */
+
+  .workshop{
+    margin: 0 0 13vh;
+  }
+
+  .workshop img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+  }
+
+  .workshop figcaption{
+    margin-top: 12px;
+
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+
+
+  /* Threads
+  -------------------------------------------------- */
+
+  .threads{
     border-top: 1px solid var(--line);
   }
 
-  .possibility{
+  .thread{
     display: grid;
-    grid-template-columns: 110px 1fr;
-    gap: 32px;
-    padding: 36px 0 40px;
+    grid-template-columns: 100px 1fr;
+    gap: 34px;
+
+    padding: 38px 0 42px;
     border-bottom: 1px solid var(--line);
   }
 
-  .possibility-number{
+  .thread-number{
     font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
     color: var(--ink-soft);
-    padding-top: 7px;
+    padding-top: 6px;
   }
 
-  .possibility h2{
+  .thread h2{
     font-family: 'Fraunces', serif;
-    font-size: clamp(25px, 4vw, 34px);
     font-weight: 400;
+    font-size: clamp(27px, 4vw, 38px);
     line-height: 1.15;
-    margin: 0 0 12px;
+    letter-spacing: -0.015em;
+    margin: 0 0 14px;
   }
 
-  .possibility p{
+  .thread p{
     font-size: 15px;
-    line-height: 1.65;
+    line-height: 1.7;
     color: var(--ink-soft);
-    max-width: 48ch;
-    margin: 0 0 16px;
+    max-width: 49ch;
+    margin: 0 0 18px;
   }
 
-  .possibility-link{
+  .thread a{
     font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
     color: var(--indigo);
@@ -155,34 +189,39 @@
     border-bottom: 1px dashed var(--indigo);
   }
 
-  .possibility-link:hover{
+  .thread a:hover{
     border-bottom-style: solid;
   }
 
-  /* Closing */
+
+  /* Conversation
+  -------------------------------------------------- */
 
   .closing{
-    margin-top: 15vh;
+    margin-top: 14vh;
+    max-width: 560px;
   }
 
   .closing p{
     font-family: 'Fraunces', serif;
-    font-size: clamp(27px, 4vw, 38px);
+    font-size: clamp(28px, 4vw, 40px);
     line-height: 1.25;
-    max-width: 19ch;
-    margin: 0 0 32px;
+    letter-spacing: -0.015em;
+    margin: 0 0 30px;
   }
 
   .conversation{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
     color: var(--madder);
     text-decoration: none;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
     border-bottom: 1px solid var(--madder);
-    padding-bottom: 3px;
+    padding-bottom: 4px;
   }
 
-  /* Mobile */
+
+  /* Mobile
+  -------------------------------------------------- */
 
   @media (max-width: 600px){
 
@@ -191,31 +230,41 @@
     }
 
     header{
-      margin-bottom: 12vh;
+      margin-bottom: 10vh;
     }
 
-    .intro{
-      margin-bottom: 12vh;
+    .opening{
+      margin-bottom: 10vh;
     }
 
-    .intro p{
+    h1{
+      font-size: clamp(42px, 12vw, 58px);
+    }
+
+    .opening p{
       font-size: 16px;
     }
 
-    .possibility{
-      grid-template-columns: 1fr;
-      gap: 10px;
-      padding: 28px 0 32px;
+    .workshop{
+      margin-bottom: 10vh;
     }
 
-    .possibility-number{
+    .thread{
+      grid-template-columns: 1fr;
+      gap: 9px;
+      padding: 29px 0 33px;
+    }
+
+    .thread-number{
       padding-top: 0;
     }
 
     .closing{
-      margin-top: 12vh;
+      margin-top: 10vh;
     }
+
   }
+
 </style>
 </head>
 
@@ -225,82 +274,113 @@
 
   <header>
     <p class="wordmark">Indebo</p>
-    <a class="back" href="index.html">← The Door</a>
+
+    <a class="back" href="index.html">
+      ← The Door
+    </a>
   </header>
 
 
-  <section class="intro">
+  <section class="opening">
 
-    <h1>India on your mind?</h1>
+    <h1>There are many ways into India.</h1>
 
     <p>
-      There are many ways into India.
-      Perhaps you already know where you want to go.
-      Perhaps you only know what has made you curious.
-      Here are a few possibilities.
+      Sometimes it begins with a place.
+      Sometimes with a person, an object, a book,
+      a photograph — or simply a question.
     </p>
 
   </section>
 
 
-  <section class="possibilities" aria-label="Possibilities">
+  <figure class="workshop">
 
-    <article class="possibility">
+    <!--
+      Save the Claude/workshop image as:
 
-      <div class="possibility-number">01</div>
+      assets/indebo-workshop.jpg
+
+      and keep this filename unchanged.
+    -->
+
+    <img
+      src="assets/indebo-workshop.jpg"
+      alt="A working desk covered with notes, books and research"
+    >
+
+    <figcaption>
+      This is more or less how things begin.
+    </figcaption>
+
+  </figure>
+
+
+  <section class="threads" aria-label="Some possibilities">
+
+
+    <article class="thread">
+
+      <div class="thread-number">01</div>
 
       <div>
-        <h2>Follow a craft</h2>
+
+        <h2>Follow a craft.</h2>
 
         <p>
-          Polly's curiosity about textiles took us into the world
-          of warp and weft. Shivam taught us about zardozi —
-          how metal meets cloth and creates magic.
+          Polly's curiosity about textiles took us into
+          the world of the warp and the weft. Shivam
+          taught us about zardozi — how metal meets
+          cloth and creates magic.
         </p>
 
-        <a class="possibility-link" href="#">
-          Follow this thread →
+        <a href="#">
+          Follow the thread →
         </a>
+
       </div>
 
     </article>
 
 
-    <article class="possibility">
+    <article class="thread">
 
-      <div class="possibility-number">02</div>
+      <div class="thread-number">02</div>
 
       <div>
-        <h2>Go looking for a story</h2>
+
+        <h2>Look at something closely.</h2>
 
         <p>
-          A book, an old photograph, a building, a forgotten
-          connection. Sometimes the thing that interests you
-          most is not on the usual itinerary.
+          A bronze. A painting. A piece of furniture.
+          An old building. Sometimes the object is
+          only the beginning of the story.
         </p>
 
-        <a class="possibility-link" href="#">
-          See where it leads →
+        <a href="#">
+          See what we've been looking at →
         </a>
+
       </div>
 
     </article>
 
 
-    <article class="possibility">
+    <article class="thread">
 
-      <div class="possibility-number">03</div>
+      <div class="thread-number">03</div>
 
       <div>
-        <h2>Meet someone who knows</h2>
+
+        <h2>Meet someone who knows.</h2>
 
         <p>
-          A maker, historian, artist, cook, naturalist or simply
-          someone who has spent a lifetime paying attention.
-          People often make the place.
+          Makers, artists, historians, cooks, architects,
+          collectors and people who have spent a lifetime
+          paying attention.
         </p>
 
-        <a class="possibility-link" href="#">
+        <a href="#">
           Meet some of them →
         </a>
 
@@ -309,25 +389,27 @@
     </article>
 
 
-    <article class="possibility">
+    <article class="thread">
 
-      <div class="possibility-number">04</div>
+      <div class="thread-number">04</div>
 
       <div>
-        <h2>Take the long way</h2>
+
+        <h2>Read a little deeper.</h2>
 
         <p>
-          Sometimes the road, railway or river between two places
-          is more interesting than either destination.
+          Books have a way of changing the shape of a journey.
+          So do conversations. We follow both.
         </p>
 
-        <a class="possibility-link" href="#">
-          Take a look →
+        <a href="#">
+          Open the bookshelf →
         </a>
 
       </div>
 
     </article>
+
 
   </section>
 
@@ -335,8 +417,8 @@
   <section class="closing">
 
     <p>
-      These are possibilities, not packages.
-      The interesting part is finding the right one for you.
+      Follow one thread far enough,
+      and it may become a journey.
     </p>
 
     <a class="conversation" href="conversation.html">
