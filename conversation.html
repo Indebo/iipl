@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Start a conversation — Indebo</title>
+<meta name="description" content="Start a conversation with Indebo about travelling in India.">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+
+  :root{
+    --paper: #EDEAE1;
+    --ink: #212B30;
+    --ink-soft: #4B565B;
+    --madder: #7C332A;
+    --line: rgba(33,43,48,0.16);
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+
+  body{
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{
+    color: inherit;
+  }
+
+  ::selection{
+    background: var(--madder);
+    color: var(--paper);
+  }
+
+  :focus-visible{
+    outline: 2px solid var(--madder);
+    outline-offset: 5px;
+  }
+
+  main{
+    max-width: 760px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 56px 32px 60px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header */
+
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .wordmark{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  .back{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+    text-decoration: none;
+  }
+
+  .back:hover{
+    color: var(--ink);
+  }
+
+  /* Conversation */
+
+  .conversation{
+    margin: auto 0;
+    padding: 10vh 0 12vh;
+  }
+
+  h1{
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(42px, 7vw, 68px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+
+    max-width: 12ch;
+    margin: 0 0 32px;
+  }
+
+  .intro{
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin: 0 0 44px;
+  }
+
+  /* Invitations */
+
+  .actions{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .action{
+    font-family: 'Fraunces', serif;
+    font-size: 25px;
+    line-height: 1.2;
+    text-decoration: none;
+
+    color: var(--madder);
+
+    border-bottom: 1px solid var(--madder);
+    padding-bottom: 5px;
+  }
+
+  .action:hover{
+    color: var(--ink);
+    border-bottom-color: var(--ink);
+  }
+
+  .action .arrow{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.7em;
+    font-weight: 300;
+    margin-left: 8px;
+
+    display: inline-block;
+    transition: transform 0.15s ease;
+  }
+
+  .action:hover .arrow{
+    transform: translateX(5px);
+  }
+
+  /* Not ready */
+
+  .not-ready{
+    margin-top: 12vh;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+  }
+
+  .not-ready-label{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin: 0 0 12px;
+  }
+
+  .not-ready p{
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    line-height: 1.35;
+    margin: 0 0 16px;
+    max-width: 30ch;
+  }
+
+  .not-ready a{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--ink-soft);
+  }
+
+  .not-ready a:hover{
+    border-bottom-style: solid;
+  }
+
+  /* Mobile */
+
+  @media (max-width: 600px){
+
+    main{
+      padding: 32px 20px 40px;
+    }
+
+    .conversation{
+      padding: 8vh 0 10vh;
+    }
+
+    h1{
+      font-size: clamp(40px, 11vw, 56px);
+    }
+
+    .intro{
+      font-size: 16px;
+    }
+
+    .action{
+      font-size: 23px;
+    }
+
+    .not-ready{
+      margin-top: 10vh;
+    }
+
+  }
+
+</style>
+</head>
+
+<body>
+
+<main>
+
+  <header>
+    <p class="wordmark">Indebo</p>
+
+    <a class="back" href="index.html">
+      ← The Door
+    </a>
+  </header>
+
+
+  <section class="conversation">
+
+    <h1>Ready to start a conversation?</h1>
+
+    <p class="intro">
+      Tell us what is on your mind.
+
+      You don't need an itinerary.
+      You don't need to know where to go.
+      You don't even need to know exactly what you're looking for.
+
+      We'll take it from there.
+    </p>
+
+
+    <div class="actions">
+
+      <a class="action" href="mailto:india@indebo.com">
+        Write to us
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="action" href="#">
+        Leave us a voice note
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+
+    </div>
+
+
+    <div class="not-ready">
+
+      <p class="not-ready-label">
+        Not ready to write yet?
+      </p>
+
+      <p>
+        Have a look around. Follow a few threads.
+      </p>
+
+      <a href="india.html">
+        India on your mind? →
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+</body>
+</html>
