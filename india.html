@@ -16,274 +16,304 @@
 
 <style>
 
-  :root{
-    --paper: #EDEAE1;
-    --ink: #212B30;
-    --ink-soft: #4B565B;
-    --madder: #7C332A;
-    --turmeric: #B5872C;
-    --indigo: #2D4356;
-    --line: rgba(33,43,48,0.16);
+:root {
+  --paper: #EDEAE1;
+  --ink: #212B30;
+  --ink-soft: #4B565B;
+  --madder: #7C332A;
+  --turmeric: #B5872C;
+  --indigo: #2D4356;
+  --line: rgba(33,43,48,0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--madder);
+  color: var(--paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--madder);
+  outline-offset: 4px;
+}
+
+
+/* PAGE
+-------------------------------------------------- */
+
+main {
+  width: min(900px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 52px 0 90px;
+}
+
+
+/* HEADER
+-------------------------------------------------- */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 120px;
+}
+
+.wordmark {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.back {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.back:hover {
+  color: var(--ink);
+}
+
+
+/* OPENING
+-------------------------------------------------- */
+
+.opening {
+  max-width: 700px;
+  margin-bottom: 105px;
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: clamp(48px, 7vw, 76px);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  margin: 0 0 30px;
+  max-width: 11ch;
+}
+
+.opening p {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 47ch;
+  margin: 0;
+}
+
+
+/* IMAGE
+-------------------------------------------------- */
+
+.workshop {
+  margin: 0 0 110px;
+}
+
+.workshop img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.workshop figcaption {
+  margin-top: 12px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+
+/* THREADS
+-------------------------------------------------- */
+
+.threads {
+  border-top: 1px solid var(--line);
+}
+
+.thread {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 34px;
+  padding: 38px 0 42px;
+  border-bottom: 1px solid var(--line);
+}
+
+.thread-number {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-soft);
+  padding-top: 6px;
+}
+
+.thread h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: clamp(28px, 4vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 0 0 14px;
+}
+
+.thread p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 50ch;
+  margin: 0 0 18px;
+}
+
+.thread a {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--indigo);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--indigo);
+}
+
+.thread a:hover {
+  border-bottom-style: solid;
+}
+
+
+/* CLOSING
+-------------------------------------------------- */
+
+.closing {
+  margin-top: 115px;
+  max-width: 580px;
+}
+
+.closing p {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  margin: 0 0 30px;
+}
+
+.conversation {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--madder);
+  text-decoration: none;
+  border-bottom: 1px solid var(--madder);
+  padding-bottom: 5px;
+}
+
+.conversation:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+
+/* MOBILE
+-------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+  main {
+    width: calc(100% - 40px);
+    padding: 32px 0 60px;
   }
 
-  *{
-    box-sizing: border-box;
+  header {
+    margin-bottom: 80px;
   }
 
-  body{
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Work Sans', sans-serif;
-    -webkit-font-smoothing: antialiased;
+  .opening {
+    margin-bottom: 70px;
   }
 
-  a{
-    color: inherit;
+  h1 {
+    font-size: clamp(44px, 12vw, 60px);
   }
 
-  ::selection{
-    background: var(--madder);
-    color: var(--paper);
+  .opening p {
+    font-size: 16px;
   }
 
-  :focus-visible{
-    outline: 2px solid var(--madder);
-    outline-offset: 5px;
+  .workshop {
+    margin-bottom: 75px;
   }
 
-  main{
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 56px 32px 80px;
+  .thread {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 28px 0 32px;
   }
 
-
-  /* Header
-  -------------------------------------------------- */
-
-  header{
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 13vh;
+  .thread-number {
+    padding-top: 0;
   }
 
-  .wordmark{
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-    margin: 0;
+  .thread h2 {
+    font-size: 29px;
   }
 
-  .back{
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: var(--ink-soft);
-    text-decoration: none;
-  }
-
-  .back:hover{
-    color: var(--ink);
-  }
-
-
-  /* Opening
-  -------------------------------------------------- */
-
-  .opening{
-    max-width: 680px;
-    margin-bottom: 12vh;
-  }
-
-  h1{
-    font-family: 'Fraunces', serif;
-    font-weight: 400;
-    font-size: clamp(46px, 7vw, 76px);
-    line-height: 1.02;
-    letter-spacing: -0.025em;
-    margin: 0 0 30px;
-    max-width: 11ch;
-  }
-
-  .opening p{
-    font-size: 18px;
-    line-height: 1.65;
-    color: var(--ink-soft);
-    max-width: 46ch;
-    margin: 0;
-  }
-
-
-  /* Workshop image
-  -------------------------------------------------- */
-
-  .workshop{
-    margin: 0 0 13vh;
-  }
-
-  .workshop img{
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 12px;
-  }
-
-  .workshop figcaption{
-    margin-top: 12px;
-
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    line-height: 1.5;
-    color: var(--ink-soft);
-  }
-
-
-  /* Threads
-  -------------------------------------------------- */
-
-  .threads{
-    border-top: 1px solid var(--line);
-  }
-
-  .thread{
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: 34px;
-
-    padding: 38px 0 42px;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .thread-number{
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: var(--ink-soft);
-    padding-top: 6px;
-  }
-
-  .thread h2{
-    font-family: 'Fraunces', serif;
-    font-weight: 400;
-    font-size: clamp(27px, 4vw, 38px);
-    line-height: 1.15;
-    letter-spacing: -0.015em;
-    margin: 0 0 14px;
-  }
-
-  .thread p{
+  .thread p {
     font-size: 15px;
-    line-height: 1.7;
-    color: var(--ink-soft);
-    max-width: 49ch;
-    margin: 0 0 18px;
   }
 
-  .thread a{
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: var(--indigo);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--indigo);
+  .closing {
+    margin-top: 80px;
   }
 
-  .thread a:hover{
-    border-bottom-style: solid;
-  }
-
-
-  /* Conversation
-  -------------------------------------------------- */
-
-  .closing{
-    margin-top: 14vh;
-    max-width: 560px;
-  }
-
-  .closing p{
-    font-family: 'Fraunces', serif;
-    font-size: clamp(28px, 4vw, 40px);
-    line-height: 1.25;
-    letter-spacing: -0.015em;
-    margin: 0 0 30px;
-  }
-
-  .conversation{
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: var(--madder);
-    text-decoration: none;
-    border-bottom: 1px solid var(--madder);
-    padding-bottom: 4px;
-  }
-
-
-  /* Mobile
-  -------------------------------------------------- */
-
-  @media (max-width: 600px){
-
-    main{
-      padding: 32px 20px 60px;
-    }
-
-    header{
-      margin-bottom: 10vh;
-    }
-
-    .opening{
-      margin-bottom: 10vh;
-    }
-
-    h1{
-      font-size: clamp(42px, 12vw, 58px);
-    }
-
-    .opening p{
-      font-size: 16px;
-    }
-
-    .workshop{
-      margin-bottom: 10vh;
-    }
-
-    .thread{
-      grid-template-columns: 1fr;
-      gap: 9px;
-      padding: 29px 0 33px;
-    }
-
-    .thread-number{
-      padding-top: 0;
-    }
-
-    .closing{
-      margin-top: 10vh;
-    }
-
-  }
+}
 
 </style>
 </head>
+
 
 <body>
 
 <main>
 
+
+  <!-- HEADER -->
+
   <header>
+
     <p class="wordmark">Indebo</p>
 
     <a class="back" href="index.html">
       ← The Door
     </a>
+
   </header>
 
 
+  <!-- OPENING -->
+
   <section class="opening">
 
-    <h1>There are many ways into India.</h1>
+    <h1>
+      There are many ways into India.
+    </h1>
 
     <p>
       Sometimes it begins with a place.
@@ -294,19 +324,13 @@
   </section>
 
 
+  <!-- IMAGE -->
+
   <figure class="workshop">
-
-    <!--
-      Save the Claude/workshop image as:
-
-      assets/indebo-workshop.jpg
-
-      and keep this filename unchanged.
-    -->
 
     <img
       src="assets/by-the-riverside.jpg"
-      alt="A working desk covered with notes, books and research"
+      alt="India Travel Desk by the Riverside"
     >
 
     <figcaption>
@@ -316,16 +340,22 @@
   </figure>
 
 
+  <!-- THREADS -->
+
   <section class="threads" aria-label="Some possibilities">
 
 
     <article class="thread">
 
-      <div class="thread-number">01</div>
+      <div class="thread-number">
+        01
+      </div>
 
       <div>
 
-        <h2>Follow a craft.</h2>
+        <h2>
+          Follow a craft.
+        </h2>
 
         <p>
           Polly's curiosity about textiles took us into
@@ -345,11 +375,15 @@
 
     <article class="thread">
 
-      <div class="thread-number">02</div>
+      <div class="thread-number">
+        02
+      </div>
 
       <div>
 
-        <h2>Look at something closely.</h2>
+        <h2>
+          Look at something closely.
+        </h2>
 
         <p>
           A bronze. A painting. A piece of furniture.
@@ -368,11 +402,15 @@
 
     <article class="thread">
 
-      <div class="thread-number">03</div>
+      <div class="thread-number">
+        03
+      </div>
 
       <div>
 
-        <h2>Meet someone who knows.</h2>
+        <h2>
+          Meet someone who knows.
+        </h2>
 
         <p>
           Makers, artists, historians, cooks, architects,
@@ -391,11 +429,15 @@
 
     <article class="thread">
 
-      <div class="thread-number">04</div>
+      <div class="thread-number">
+        04
+      </div>
 
       <div>
 
-        <h2>Read a little deeper.</h2>
+        <h2>
+          Read a little deeper.
+        </h2>
 
         <p>
           Books have a way of changing the shape of a journey.
@@ -413,6 +455,8 @@
 
   </section>
 
+
+  <!-- CONVERSATION -->
 
   <section class="closing">
 
